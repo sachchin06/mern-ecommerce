@@ -2,9 +2,15 @@ import styled from "styled-components";
 import Search from "@material-ui/icons/Search";
 import { Badge } from "@material-ui/core";
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import {mobile} from "../responsive"
+
 
 const Container = styled.div`
   height: 60px;
+
+  ${mobile({
+    backgroundColor: "red"
+  })}
   
 `;
 const Wrapper = styled.div`
@@ -76,7 +82,7 @@ const Navbar = () => {
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGNIN</MenuItem>
           <MenuItem>
-          <Badge badgeContent={4} color="primary">
+          <Badge overlap="rectangular" badgeContent={4} color="primary">
         <ShoppingCartOutlinedIcon />
       </Badge>
           </MenuItem>
