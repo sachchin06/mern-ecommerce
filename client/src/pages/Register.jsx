@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {mobile} from "../responsive"
 
 const Container = styled.div`
 width: 100vw;
@@ -11,7 +12,7 @@ url("https://plus.unsplash.com/premium_photo-1661492274003-784f2c63a431?ixlib=rb
 background-size: cover;
 display: flex;
 align-items: center;
-justify-content: end;
+justify-content: center;
 
 
 `
@@ -20,6 +21,11 @@ width: 40%;
 padding: 20px;
 margin-right: 30px;
 background-color: white;
+
+${mobile({
+    width: "70%",
+    marginRight: "0px"
+  })}
 
 
 `

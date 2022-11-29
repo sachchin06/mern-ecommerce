@@ -4,11 +4,20 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import {mobile} from "../responsive"
 
+const Container = styled.div`
 
-const Container = styled.div``;
+`;
 const Wrapper = styled.div`
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+
+  ${mobile({
+    padding: "10px"
+  })}
 `;
 const Title = styled.h2`
   font-weight: 300;
@@ -18,7 +27,8 @@ const Title = styled.h2`
 const Top = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+ justify-content: space-around;
+  
 `;
 
 const TopButton = styled.div`
@@ -26,25 +36,40 @@ const TopButton = styled.div`
   border: 1px solid gray;
   border: ${(props) => props.type === "filled" && "none"};
   background-color: ${(props) =>
-    props.type === "filled" ? "black" : "transparent"};
+  props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
+
+  ${mobile({
+    padding: "5px",
+    fontSize: "12px"
+  })}
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({
+    display: "none"
+  })}
+`;
 const TopText = styled.span`
   padding: 0px 10px;
 `;
 
 const Bottom = styled.div`
-padding: 25px 0px;
+  padding: 25px 0px;
   display: flex;
   justify-content: space-between;
+
+  ${mobile({
+    flexDirection: "column"
+  })}
 `;
 
 const Info = styled.div`
   flex: 3;
   width: 100%;
   height: 100%;
+
+  
 `;
 
 const Product = styled.div`
@@ -53,12 +78,19 @@ const Product = styled.div`
   align-items: center;
   padding: 20px 0px;
  
+  ${mobile({
+    gap: "10px",
+      flexDirection: "column"
+  })}
+  
+ 
 `;
 const ProductDetail = styled.div`
   display: flex;
   flex: 2;
   gap: 15px;
   padding-left: 10px;
+  
 `;
 const Image = styled.img`
   width: 150px;
@@ -70,6 +102,7 @@ const Details = styled.div`
   flex-direction: column;
   row-gap: 15px;
   font-size: 14px;
+  
 `;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
@@ -93,6 +126,13 @@ const PriceDetails = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+ 
+
+
+  ${mobile({
+      marginLeft: "20px",
+      alignItems: "center"
+  })}
 `;
 
 const AmountContainer = styled.div`
@@ -109,6 +149,7 @@ const ProductPrice = styled.span`
 font-size: 24px;
 font-weight: 300;
 
+
 `
 
 const Summary = styled.div`
@@ -117,6 +158,10 @@ border:0.5px solid lightgray;
 border-radius: 10px;
   flex: 1;
   height: 50vh;
+
+  ${mobile({
+    margin: "0px 15px"
+  })}
 `;
 
 

@@ -5,12 +5,18 @@ import Navbar from "../components/Navbar"
 import Newsletter from "../components/Newsletter"
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import {mobile} from "../responsive"
 
 const Container = styled.div``
 const Wrapper = styled.div`
 display: flex;
 padding: 50PX;
 gap: 20px;
+
+${mobile({
+    flexDirection:"column",
+    padding: "10px"
+  })}
 
 `
 const Image = styled.img`
@@ -20,9 +26,18 @@ width: 100%;
 object-fit: cover;
 flex: 1;
 
+${mobile({
+    height: "40px"
+  })}
+
 `
 const InfoContainer = styled.div`
 flex: 1;
+padding: 0px 30px;
+
+${mobile({
+    padding: "10px"
+  })}
 
 `
 const Title = styled.h2`
@@ -45,6 +60,10 @@ width: 50%;
 display: flex;
 justify-content: space-between;
 padding: 20px 0px;
+
+${mobile({
+    width: "100%"
+  })}
 
 `
 const Filter = styled.div`
@@ -76,6 +95,9 @@ width: 50%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+${mobile({
+    width: "100%"
+  })}
 
 `
 const AmountContainer = styled.div`

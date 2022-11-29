@@ -4,45 +4,47 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import Newsletter from "../components/Newsletter"
 import Products from "../components/Products"
+import {mobile} from "../responsive"
 
 const Container = styled.div``
 const Title = styled.h2`
-margin: 20px;
+margin: 20px 5px;
 
 `
 const FilterContainer = styled.div`
 display: flex;
 justify-content: space-between;
-align-items: center;
+/* align-items: center; */
 
 `
 const Filter = styled.div`
 margin: 20px;
 
-`
+${mobile({
+    margin: "0px 10px",
+    
+  })}
 
+`
 const FilterText = styled.span`
 font-size: 20px;
 font-weight: 500;
-margin-right: 20px;
-
+${mobile({
+    fontSize: "15px",
+   
+  })}
 `
-
 const Select = styled.select`
 padding: 8px;
 margin-right: 20px;
 
+${mobile({
+    padding: "5px",
+    marginRight: "18px",
+    marginTop: "10px"
+  })}
 `
-
-const Option = styled.option`
-
-
-`
-
-
-
-
-
+const Option = styled.option``
 const ProductList = () => {
   return (
     <Container>
